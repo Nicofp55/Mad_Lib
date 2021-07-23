@@ -26,7 +26,6 @@ require_once('block_mad_lib_form.php');
             global $DB, $COURSE, $USER;
             $categories = array("[wordn]","[worda]","[wordv]");
             $madlib = '';
-            $DB->set_debug(true);
             $count = $DB->get_record_sql('SELECT COUNT(*) AS counter FROM {mad_lib_sentence}');
             $context = get_context_instance(CONTEXT_COURSE,$COURSE->id);
             $random = rand(1, $count->counter);
